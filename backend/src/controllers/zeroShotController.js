@@ -15,4 +15,4 @@ const zeroShotPrompt = (req, res) => {
   });
 };
 
-module.exports = { zeroShotPrompt };
+export default zeroShotPrompt;
