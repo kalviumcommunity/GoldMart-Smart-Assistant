@@ -1,5 +1,5 @@
 
-# 🟡 GoldMart AI Assistant – Smart Gold Shopping Guide
+#  GoldMart AI Assistant – Smart Gold Shopping Guide
 
 GoldMart AI Assistant is an intelligent, interactive feature within the GoldMart web application that helps both **buyers** and **sellers** make informed decisions in the gold marketplace.
 
