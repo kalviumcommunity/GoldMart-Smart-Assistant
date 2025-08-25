@@ -1,10 +1,9 @@
-// src/routes/zeroShotRoutes.js
-const express = require("express");
-const { zeroShotPrompt } = require("../controllers/zeroShotController");
+import express from "express";
+import zeroShotPrompt from "../controllers/zeroShotController.js"; // ✅ default import
 
 const router = express.Router();
 
 // POST /api/zeroshot
 router.post("/", zeroShotPrompt);
 
-module.exports = router;
+export default router;
