@@ -1,5 +1,5 @@
-// backend/src/controllers/multiShotController.js
 import { callOpenRouter } from "../utils/openrouter.js";
+import { countTokens } from "../utils/tokenizer.js";
 
 export const multiShotPrompt = async (req, res) => {
   try {
@@ -31,11 +31,15 @@ Bot: "Absolutely! Let me know the weight, purity, and your asking price."
 
     const fullPrompt = `${examples}\n\nUser: ${prompt}\nBot:`;
 
+    // ✅ Count tokens before sending to AI
+    const tokenCount = countTokens(fullPrompt);
+
     const result = await callOpenRouter(fullPrompt);
 
     res.json({
       success: true,
       reply: result,
+      tokenCount, // Include token count in response
     });
   } catch (error) {
     console.error("MultiShot Error:", error.message);
